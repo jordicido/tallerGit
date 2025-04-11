@@ -20,7 +20,7 @@
     
     
       
-        <title>Part2 - Taller Git</title>
+        <title>Part 2: Crear branques i fusionar-les - Taller Git</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#part-2-crear-branques-i-fusionar-les" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Part2
+              Part 2: Crear branques i fusionar-les
             
           </span>
         </div>
@@ -261,18 +266,70 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Part 2: Crear branques i fusionar-les
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Part2
+    Part 2: Crear branques i fusionar-les
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és una branca?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-una-nova-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear una nova branca
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -295,6 +352,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és una branca?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-una-nova-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear una nova branca
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -310,9 +395,32 @@
 
 
 
-  <h1>Part2</h1>
-
-
+<h1 id="part-2-crear-branques-i-fusionar-les">Part 2: Crear branques i fusionar-les</h1>
+<h2 id="que-es-una-branca">Què és una branca?</h2>
+<p>Per entendre què és una branca, pensem en un arbre. La branca principal és la branca <code>master</code> o <code>main</code>, i les altres branques són com les branques secundàries que surten d'aquesta. Cada branca pot tenir el seu propi conjunt de canvis, i podem fusionar-les quan sigui necessari.</p>
+<p>Anem a afegir un paràmetre més a la comanda <code>git log</code> per veure les branques de cada commit. Executa la següent comanda:</p>
+<pre><code class="language-bash">git log --oneline --graph --decorate
+</code></pre>
+<p>Vorem que l'eixida de la comanda varia un poc respecte a la que hem vist abans.</p>
+<pre><code class="language-bash">* 8a72d0a (HEAD -&gt; main) més canvis al README
+* 8267bc4 nous canvis al README
+* 2d094c9 canvis al README
+* a7a541a Afegit README.md
+</code></pre>
+<p>Anem a aprofundir en este esquema, i ho pintarem diferent per entendre el concepte de commit i de branca. Este diagrama és el que a mi em va fer canviar totalment la concepció de Git i em va fer clic per entendre com funciona.</p>
+<p><img alt="Diagrama de commits i branques" src="../assets/image4.png" /></p>
+<p>En este diagrama podem observar que cada commit és un punt en el temps, i cada branca és una línia que representa el desenvolupament del projecte. Es important entendre que les branques no són més que punters que apunten a un commit concret en el temps. Això vol dir que cada vegada que fem un commit, estem creant un nou punt en el temps.</p>
+<p>Eixos punts en el temps ens permetran tornar enrere en el temps i veure com era el projecte en un moment concret. Això és molt útil si volem desfer canvis.</p>
+<h2 id="crear-una-nova-branca">Crear una nova branca</h2>
+<p>Per crear una nova branca, podem utilitzar la comanda <code>git branch</code>. Aquesta comanda ens permet crear una nova branca a partir de la branca actual. Per exemple, si volem crear una nova branca anomenada <code>nova-branca</code>, podem executar la següent comanda:</p>
+<pre><code class="language-bash">git branch nova-branca
+</code></pre>
+<p>Amb esta comanda el que fem és crear un nou punter que apunta al commit actual.</p>
+<p><img alt="Crear nova branca" src="../assets/image5.png" /></p>
+<p>Però fixeu-vos en <code>HEAD</code>, què és això? <code>HEAD</code> és un punter que indica la branca en la que ens troben actualment. En este cas, <code>HEAD</code> apunta a la branca <code>main</code>, que és la branca principal del nostre repositori. Si volem canviar a la nova branca que acabem de crear, podem utilitzar la comanda <code>git checkout</code>:</p>
+<pre><code class="language-bash">git checkout nova-branca
+</code></pre>
+<p><img alt="Canviar de branca" src="../assets/image6.png" /></p>
 
 
 
