@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Taller Git
+site_author: Jordi Cidoncha, Antonio Camarena
+
+theme:
+  name: "material"
+  language: es
+  font:
+    text: Roboto
+    code: JetBrains Mono
