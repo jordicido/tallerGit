@@ -28,6 +28,15 @@ Això farà que Git continue amb el rebase i aplique els canvis restants. Si hi 
 
 ![Resultat després del rebase](assets/image15.png)
 
+Ara, com ja tenim l'historial canviat, podem fer simplement un fast-forward merge, que és un merge sense conflictes i sense crear un commit de merge. Per fer-ho, hem de situar-nos a la branca `main` i executar la comanda següent:
+
+```bash
+git checkout main
+git merge feature
+```
+
+Això farà que la branca `main` es fusiona amb la branca `feature` sense crear un commit de merge. Ara, l'historial de commits estarà net i clar, sense conflictes ni commits de merge innecessaris.
+
 ## Juntar commits
 
 Hi ha voltes que els canvis que volem fer no són tan grans com per fer un commit per a cada canvi. En estos casos, podem agrupar diversos commits en un de sol. Per fer-ho, utilitzarem la comanda `git rebase -i HEAD~<n>`, on `<n>` és el nombre de commits que volem agrupar.
