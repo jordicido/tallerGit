@@ -20,7 +20,7 @@
     
     
       
-        <title>Part6 - Taller Git</title>
+        <title>Part 6: Modificar l'historial de commits - Taller Git</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#part-6-modificar-lhistorial-de-commits" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Part6
+              Part 6: Modificar l'historial de commits
             
           </span>
         </div>
@@ -349,18 +354,79 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Part 6: Modificar l'historial de commits
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Part6
+    Part 6: Modificar l'historial de commits
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evitar-un-merge-amb-conflictes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evitar un merge amb conflictes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juntar-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juntar commits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -383,6 +449,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evitar-un-merge-amb-conflictes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evitar un merge amb conflictes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juntar-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juntar commits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -398,9 +501,41 @@
 
 
 
-  <h1>Part6</h1>
-
-
+<h1 id="part-6-modificar-lhistorial-de-commits">Part 6: Modificar l'historial de commits</h1>
+<h2 id="context">Context</h2>
+<p>Quan ja tingueu certa soltura amb Git voldreu que el vostre historial de commits estiga el més net i clar possible, com hem vist en totes les parts anteriors, quan comenceu a toquetejar, fer branques, pull requests, merges i demés, l'arbre de commits comença a complicar-se. Per este tipus de situacions comptem amb algunes comandes que ens permeten arreglar un poc l'historial de commits. Anem a vore què podem fer amb elles.</p>
+<h2 id="evitar-un-merge-amb-conflictes">Evitar un merge amb conflictes</h2>
+<p>Quan fem un merge entre dues branques, si hi ha canvis en els mateixos arxius, Git no sabrà quin canvi aplicar i ens demanarà que decidim quina versió volem conservar. Si volem evitar això, podem fer un rebase de la branca que volem fusionar amb la branca principal. Això farà que els commits de la branca que volem fusionar es reescriguen sobre la branca principal, evitant així els conflictes.</p>
+<p><img alt="Exemple de branques amb diversificació de camins" src="../assets/image14.png" /></p>
+<p>Per fer un rebase, primer hem de situar-nos a la branca que volem fusionar i després executar la comanda <code>git rebase &lt;branca_principal&gt;</code>. Per exemple, si volem fusionar la branca <code>feature</code> amb la branca <code>main</code>, hem de fer el següent:</p>
+<pre><code class="language-bash">git rebase main
+</code></pre>
+<p>Això farà que els commits de la branca <code>feature</code> es reescriguen sobre la branca <code>main</code>, evitant així els conflictes. Si hi ha conflictes, Git ens demanarà que els resolguem manualment. Un cop resolts, hem de fer un commit per guardar els canvis i continuar amb el rebase.</p>
+<p>Per continuar amb el rebase, hem de fer la comanda següent:</p>
+<pre><code class="language-bash">git rebase --continue
+</code></pre>
+<p>Això farà que Git continue amb el rebase i aplique els canvis restants. Si hi ha més conflictes, haurem de repetir el procés fins que tots els conflictes estiguen resolts.</p>
+<p><img alt="Resultat després del rebase" src="../assets/image15.png" /></p>
+<h2 id="juntar-commits">Juntar commits</h2>
+<p>Hi ha voltes que els canvis que volem fer no són tan grans com per fer un commit per a cada canvi. En estos casos, podem agrupar diversos commits en un de sol. Per fer-ho, utilitzarem la comanda <code>git rebase -i HEAD~&lt;n&gt;</code>, on <code>&lt;n&gt;</code> és el nombre de commits que volem agrupar.
+Per exemple, si volem agrupar els últims 3 commits, hem de fer el següent:</p>
+<pre><code class="language-bash">git rebase -i HEAD~3
+</code></pre>
+<p>Això ens obrirà un editor de text amb una llista dels últims 3 commits. La llista tindrà un aspecte similar al següent:</p>
+<pre><code class="language-bash">pick a7a541a Afegit README.md
+pick 1234567 Afegit fitxer1.txt
+pick 89abcdef Afegit fitxer2.txt
+</code></pre>
+<p>En esta llista, cada línia representa un commit. Per agrupar els commits, hem de canviar la paraula <code>pick</code> per <code>squash</code> (o <code>s</code>) en els commits que volem agrupar. Per exemple, si volem agrupar els dos últims commits en el primer, hem de fer el següent:</p>
+<pre><code class="language-bash">pick a7a541a Afegit README.md
+squash 1234567 Afegit fitxer1.txt
+squash 89abcdef Afegit fitxer2.txt
+</code></pre>
+<p>Això farà que els dos últims commits es fusionen en el primer. Un cop hàgem fet els canvis, hem de guardar i tancar l'editor de text. Git ens demanarà que escriguem un nou missatge per al commit agrupat. Podem escriure un missatge nou o deixar el missatge dels commits originals. Un cop hàgem escrit el missatge, hem de guardar i tancar l'editor de text.</p>
+<p>Això farà que Git agrupe els commits i els reescriga en un sol commit. Si hi ha conflictes, Git ens demanarà que els resolguem manualment. Un cop resolts, hem de fer un commit per guardar els canvis i continuar amb el rebase.
+Per continuar amb el rebase, hem de fer la comanda següent:</p>
+<pre><code class="language-bash">git rebase --continue
+</code></pre>
 
 
 
