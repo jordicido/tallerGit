@@ -326,6 +326,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configurar-arxius-a-ignorar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar arxius a ignorar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#afegir-fitxers-i-canvis-al-repositori" class="md-nav__link">
     <span class="md-ellipsis">
       Afegir fitxers i canvis al repositori
@@ -408,6 +417,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Part 5: Desfer canvis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Part6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -465,6 +518,15 @@
   <a href="#consultar-informacio-del-repositori" class="md-nav__link">
     <span class="md-ellipsis">
       Consultar informació del repositori
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-arxius-a-ignorar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar arxius a ignorar
     </span>
   </a>
   
@@ -548,6 +610,12 @@ Date:   Fri Apr 11 09:37:37 2025 +0200
 <p>En este cas podem vore una llista de commits més compacta, amb només el hash i el missatge del commit. Això és útil per obtenir una visió ràpida de l'historial del vostre repositori.</p>
 <pre><code class="language-bash">a7a541a (HEAD -&gt; main) Afegit README.md
 </code></pre>
+<h2 id="configurar-arxius-a-ignorar">Configurar arxius a ignorar</h2>
+<p>Imaginem que al nostre projecte tenim un fitxer anomenat <code>config.txt</code> que conté informació secreta, com claus o contrasenyes, o inclús informació personal. No volem que aquest fitxer sigui afegit al repositori, ja que podria ser exposat a altres persones. Per evitar-ho, podem crear un fitxer anomenat <code>.gitignore</code> dins del nostre repositori i afegir-hi el nom del fitxer o carpeta que volem ignorar.</p>
+<p>Per exemple, podeu crear un fitxer <code>.gitignore</code> dins de la carpeta <code>provaGit</code> i afegir-hi el següent contingut:</p>
+<pre><code class="language-bash">config.txt
+</code></pre>
+<p>Això indicarà a Git que ignori el fitxer <code>config.txt</code> i no l'afegisca al repositori. Podeu afegir altres fitxers o carpetes al fitxer <code>.gitignore</code> separant-los amb una nova línia.</p>
 <h2 id="afegir-fitxers-i-canvis-al-repositori">Afegir fitxers i canvis al repositori</h2>
 <p>Ara ens interessa realitzar diversos canvis per forçar un historial de canvis més llarg. Afegiu fitxers al projecte, modifiqueu-los i torneu a fer <code>git add</code> i <code>git commit</code> per afegir els canvis al repositori. Feu 3 o 4 commits més pel vostre compte, i després podeu continuar amb la següent part del taller.</p>
 

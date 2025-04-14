@@ -14,6 +14,8 @@
         <link rel="prev" href="../part3/">
       
       
+        <link rel="next" href="../part5/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
@@ -380,10 +382,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#suggerir-canvis-a-un-repositori-remot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggerir canvis a un repositori remot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sincronitzacio-amb-el-repositori-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sincronització amb el repositori original
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Part 5: Desfer canvis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Part6
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -441,6 +505,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#suggerir-canvis-a-un-repositori-remot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggerir canvis a un repositori remot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sincronitzacio-amb-el-repositori-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sincronització amb el repositori original
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -472,6 +554,23 @@
 <p>Per clonar un repositori remot, utilitzarem la comanda <code>git clone</code>. Aquesta comanda ens permet crear una còpia del repositori remot al nostre ordinador. La sintaxi és la següent:</p>
 <pre><code class="language-bash">git clone &lt;url_remot&gt;
 </code></pre>
+<p>Quan clonem un repositori remot ja tindrem el repositori vinculat al remot, així que no caldrà fer <code>git remote add origin &lt;url_remot&gt;</code>. A continuació cloneu el repositori que heu forkejat al vostre compte de GitHub. Per fer-ho, aneu a la pàgina del repositori i feu clic al botó "Code" i copieu l'URL que apareix. Després, obriu una terminal i escriviu la comanda <code>git clone</code> seguida de l'URL que heu copiat.</p>
+<h2 id="suggerir-canvis-a-un-repositori-remot">Suggerir canvis a un repositori remot</h2>
+<p>Ara que ja teniu el repositori clonat al vostre ordinador, podeu fer canvis i suggerir-los al repositori original. Per fer-ho, heu de crear una branca nova, fer els canvis i després fer un "pull request" al repositori original.
+Un "pull request" és una sol·licitud per a que els propietaris del repositori original revisen els vostres canvis i els fusionen amb el seu repositori. Això és útil perquè permet als propietaris del repositori revisar els canvis abans d'acceptar-los i fusionar-los amb el seu repositori.</p>
+<p>Per crear un "pull request", primer heu de fer els canvis al vostre repositori local. Després, heu de fer un commit dels canvis i pujar-los al vostre repositori remot. Finalment, heu de crear un "pull request" al repositori original.</p>
+<p>Per fer un "pull request", aneu a la pàgina del repositori original i feu clic al botó "Pull requests". Després, feu clic al botó "New pull request". Això us portarà a una pàgina on podreu seleccionar la branca que heu creat i els canvis que heu fet. Després, feu clic al botó "Create pull request" per enviar la vostra sol·licitud.</p>
+<p>És important que el missatge del "pull request" sigui clar i concís, i que expliqueu els canvis que heu fet i per què els heu fet. Això ajudarà als propietaris del repositori a entendre els vostres canvis i a revisar-los més ràpidament.</p>
+<h2 id="sincronitzacio-amb-el-repositori-original">Sincronització amb el repositori original</h2>
+<p>Si el repositori original ha canviat des que vau fer el vostre fork, és possible que vulgueu sincronitzar el vostre fork amb el repositori original. Això us permetrà tenir la versió més actualitzada del repositori original al vostre fork.</p>
+<p>Per fer-ho, heu de seguir els següents passos:</p>
+<ol>
+<li>Afegir el repositori original com a remot al vostre fork. Per fer-ho, utilitzeu la comanda <code>git remote add upstream &lt;url_repositori_original&gt;</code>. Això afegirà el repositori original com a remot anomenat "upstream".</li>
+<li>Obtenir els canvis del repositori original. Per fer-ho, utilitzeu la comanda <code>git fetch upstream</code>. Això descarregarà els canvis del repositori original al vostre ordinador.</li>
+<li>Fusionar els canvis del repositori original amb el vostre fork. Per fer-ho, utilitzeu la comanda <code>git merge upstream/main</code>. Això fusionarà els canvis del repositori original amb la vostra branca actual.</li>
+<li>Pujar els canvis al vostre fork. Per fer-ho, utilitzeu la comanda <code>git push origin &lt;nom_branque&gt;</code>. Això pujarà els canvis al vostre fork a GitHub.</li>
+<li>Ara ja podeu fer un "pull request" al repositori original amb els canvis que heu fet.</li>
+</ol>
 
 
 

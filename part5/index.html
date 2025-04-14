@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../part1/">
+        <link rel="prev" href="../part4/">
       
       
-        <link rel="next" href="../part3/">
+        <link rel="next" href="../part6/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Part 2: Crear branques i fusionar-les - Taller Git</title>
+        <title>Part 5: Desfer canvis - Taller Git</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#part-2-crear-branques-i-fusionar-les" class="md-skip">
+        <a href="#part-5-desfer-canvis" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Part 2: Crear branques i fusionar-les
+              Part 5: Desfer canvis
             
           </span>
         </div>
@@ -259,32 +259,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Part 2: Crear branques i fusionar-les
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../part2/" class="md-nav__link">
         
   
   
@@ -295,71 +273,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-una-branca" class="md-nav__link">
-    <span class="md-ellipsis">
-      Què és una branca?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crear-una-nova-branca" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear una nova branca
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diversificacio-de-camins-en-lhistorial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diversificació de camins en l'historial
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionar-branques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fusionar branques
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionar-branques-divergents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fusionar branques divergents
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -412,10 +325,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../part5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Part 5: Desfer canvis
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -426,6 +361,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desfer-canvis-en-fitxers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desfer canvis en fitxers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desfer-un-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desfer un commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desfer-un-canvi-sense-desfer-lhistorial-de-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desfer un canvi sense desfer l'historial de commits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -479,45 +470,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-una-branca" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
-      Què és una branca?
+      Context
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#crear-una-nova-branca" class="md-nav__link">
+  <a href="#desfer-canvis-en-fitxers" class="md-nav__link">
     <span class="md-ellipsis">
-      Crear una nova branca
+      Desfer canvis en fitxers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#diversificacio-de-camins-en-lhistorial" class="md-nav__link">
+  <a href="#desfer-un-commit" class="md-nav__link">
     <span class="md-ellipsis">
-      Diversificació de camins en l'historial
+      Desfer un commit
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fusionar-branques" class="md-nav__link">
+  <a href="#desfer-un-canvi-sense-desfer-lhistorial-de-commits" class="md-nav__link">
     <span class="md-ellipsis">
-      Fusionar branques
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusionar-branques-divergents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fusionar branques divergents
+      Desfer un canvi sense desfer l'historial de commits
     </span>
   </a>
   
@@ -539,105 +521,25 @@
 
 
 
-<h1 id="part-2-crear-branques-i-fusionar-les">Part 2: Crear branques i fusionar-les</h1>
-<h2 id="que-es-una-branca">Què és una branca?</h2>
-<p>Per entendre què és una branca, pensem en un arbre. La branca principal és la branca <code>master</code> o <code>main</code>, i les altres branques són com les branques secundàries que surten d'aquesta. Cada branca pot tenir el seu propi conjunt de canvis, i podem fusionar-les quan sigui necessari.</p>
-<p>Anem a afegir un paràmetre més a la comanda <code>git log</code> per veure les branques de cada commit. Executa la següent comanda:</p>
-<pre><code class="language-bash">git log --oneline --graph --decorate
+<h1 id="part-5-desfer-canvis">Part 5: Desfer canvis</h1>
+<h2 id="context">Context</h2>
+<p>A voltes, als projectes, ens adonem que hem comès un error i volem desfer els canvis que hem fet. En este apartat veurem com fer-ho.</p>
+<h2 id="desfer-canvis-en-fitxers">Desfer canvis en fitxers</h2>
+<p>Si heu modificat un fitxer i voleu desfer els canvis, podeu utilitzar la comanda <code>git checkout</code>. Aquesta comanda us permetrà desfer els canvis en un fitxer concret i tornar a la versió anterior. La sintaxi és la següent:</p>
+<pre><code class="language-bash">git checkout &lt;nom_fitxer&gt;
 </code></pre>
-<p>Vorem que l'eixida de la comanda varia un poc respecte a la que hem vist abans.</p>
-<pre><code class="language-bash">* 8a72d0a (HEAD -&gt; main) més canvis al README
-* 8267bc4 nous canvis al README
-* 2d094c9 canvis al README
-* a7a541a Afegit README.md
+<p>Això desferà els canvis en el fitxer especificat i tornarà a la versió que tenia l'arxiu en l'últim commit.</p>
+<h2 id="desfer-un-commit">Desfer un commit</h2>
+<p>Si heu fet un commit i voleu desfer-lo, podeu utilitzar la comanda <code>git reset</code>. Aquesta comanda us permetrà desfer un commit i tornar a l'estat anterior. La sintaxi és la següent:</p>
+<pre><code class="language-bash">git reset &lt;hash_commit&gt;
 </code></pre>
-<p>Anem a aprofundir en este esquema, i ho pintarem diferent per entendre el concepte de commit i de branca. Este diagrama és el que a mi em va fer canviar totalment la concepció de Git i em va fer clic per entendre com funciona.</p>
-<p><img alt="Diagrama de commits i branques" src="../assets/image4.png" /></p>
-<p>En este diagrama podem observar que cada commit és un punt en el temps, i cada branca és una línia que representa el desenvolupament del projecte. Es important entendre que les branques no són més que punters que apunten a un commit concret en el temps. Això vol dir que cada vegada que fem un commit, estem creant un nou punt en el temps.</p>
-<p>Eixos punts en el temps ens permetran tornar enrere en el temps i veure com era el projecte en un moment concret. Això és molt útil si volem desfer canvis.</p>
-<h2 id="crear-una-nova-branca">Crear una nova branca</h2>
-<p>Per crear una nova branca, podem utilitzar la comanda <code>git branch</code>. Aquesta comanda ens permet crear una nova branca a partir de la branca actual. Per exemple, si volem crear una nova branca anomenada <code>nova-branca</code>, podem executar la següent comanda:</p>
-<pre><code class="language-bash">git branch nova-branca
+<p>Hi ha dues opcions del reset, <code>--soft</code> i <code>--hard</code>. La diferència és que <code>--soft</code> manté els canvis en l'índex, mentre que <code>--hard</code> els elimina completament. Si voleu desfer un commit i mantenir els canvis, utilitzeu <code>--soft</code>. Si voleu desfer un commit i eliminar els canvis, utilitzeu <code>--hard</code>.</p>
+<p>Tingueu en compte que <code>git reset</code> és una comanda perillosa, ja que pot eliminar canvis que no es poden recuperar. Assegureu-vos de fer una còpia de seguretat dels fitxers abans d'utilitzar-la.</p>
+<h2 id="desfer-un-canvi-sense-desfer-lhistorial-de-commits">Desfer un canvi sense desfer l'historial de commits</h2>
+<p>Si voleu desfer un canvi en un fitxer sense desfer l'historial de commits, podeu utilitzar la comanda <code>git revert</code>. Aquesta comanda crea un nou commit que desfà els canvis del commit especificat. La sintaxi és la següent:</p>
+<pre><code class="language-bash">git revert &lt;hash_commit&gt;
 </code></pre>
-<p>Amb esta comanda el que fem és crear un nou punter que apunta al commit actual.</p>
-<p><img alt="Crear nova branca" src="../assets/image5.png" /></p>
-<p>Però fixeu-vos en <code>HEAD</code>, què és això? <code>HEAD</code> és un punter que indica la branca en la que ens troben actualment. En este cas, <code>HEAD</code> apunta a la branca <code>main</code>, que és la branca principal del nostre repositori. Si volem canviar a la nova branca que acabem de crear, podem utilitzar la comanda <code>git checkout</code>:</p>
-<pre><code class="language-bash">git checkout nova-branca
-</code></pre>
-<p><img alt="Canviar de branca" src="../assets/image6.png" /></p>
-<h2 id="diversificacio-de-camins-en-lhistorial">Diversificació de camins en l'historial</h2>
-<p>En l'estat anterior, tenim les dues branques apuntant al mateix commit, però ara la màgia de Git comença a passar. Si fem un commit en la nova branca, el commit es guardarà en la nova branca i no afectarà la branca <code>main</code>. Això és el que ens permet treballar en diferents funcionalitats alhora sense interferir en el treball dels altres. Des de la branca <code>nova-branca</code> fes canvis en el projecte i commiteja'ls.</p>
-<pre><code class="language-bash">git commit -m &quot;Canvis en la nova branca&quot;
-</code></pre>
-<p>Feu un git log amb els paràmetres anteriors per veure com queda l'historial. Ara veureu que la branca <code>nova-branca</code> té un commit nou que no està present en la branca <code>main</code>.</p>
-<pre><code class="language-bash">* 2e4ef06 (HEAD -&gt; nova_branca) Canvis en la nova branca
-* 8a72d0a (main) més canvis al README
-* 8267bc4 nous canvis al README
-* 2d094c9 canvis al README
-* a7a541a Afegit README.md
-</code></pre>
-<p>Si analitzem el log i el tranformem en diagrama tindriem algo així:</p>
-<p><img alt="Diagrama de branques" src="../assets/image7.png" /></p>
-<p>Ara tenim dues branques que divergeixen, i cada una té el seu propi conjunt de commits. Això és el que ens permet treballar en paral·lel sense interferir en el treball dels altres.</p>
-<h2 id="fusionar-branques">Fusionar branques</h2>
-<p>Ara que tenim dues branques, és hora de fusionar-les. La fusió de branques és el procés d'unir dues branques en una sola. Això és útil quan hem acabat de treballar en una funcionalitat i volem integrar-la a la branca principal.</p>
-<p>Per fusionar dues branques, primer hem de canviar a la branca en la qual volem fusionar els canvis. En este cas, volem fusionar els canvis de la branca <code>nova-branca</code> a la branca <code>main</code>. Per fer-ho, primer canviem a la branca <code>main</code> amb la comanda següent:</p>
-<pre><code class="language-bash">git checkout main
-</code></pre>
-<p>Ara, el nostre <code>HEAD</code> apunta a la branca <code>main</code>.</p>
-<p><img alt="Canviar a la branca main" src="../assets/image8.png" /></p>
-<p>Ara podem fusionar els canvis de la branca <code>nova-branca</code> a la branca <code>main</code> amb la comanda següent:</p>
-<pre><code class="language-bash">git merge nova-branca
-</code></pre>
-<p>El que estem fent ací, en realitat, és moure el punter <code>HEAD</code> de la branca <code>main</code> al commit de la branca <code>nova-branca</code>. Això és el que ens permet integrar els canvis de la nova branca a la branca principal.</p>
-<p>Este tipus de merge s'anomena "fast-forward merge", i és el més comú quan les dues branques no han divergit. És la casuḯstica més senzilla i no genera conflictes, ja que no hi ha canvis en la branca <code>main</code> que puguin entrar en conflicte amb els canvis de la branca <code>nova-branca</code>.</p>
-<p><img alt="Fusionar branques" src="../assets/image9.png" /></p>
-<h2 id="fusionar-branques-divergents">Fusionar branques divergents</h2>
-<p>Ara anem a complicar un poc les coses. Posem per cas que nosaltres estem fent canvis en la nostra branca <code>nova_branca</code>, anem a modificar l'arxiu README.md i afegir un nou paràgraf. Ara, si fem un commit, tindrem un nou commit en la branca <code>nova_branca</code> que no està present en la branca <code>main</code>.</p>
-<pre><code class="language-bash">git commit -m &quot;Afegit un nou paràgraf al README&quot;
-</code></pre>
-<p>Ara, canviem a la branca <code>main</code> i fem un canvi en el README.md, afegint un altre paràgraf en el mateix lloc on hem afegit el paràgraf anterior. Ara, si fem un commit, tindrem un nou commit en la branca <code>main</code> que no està present en la branca <code>nova_branca</code>.</p>
-<pre><code class="language-bash">git commit -m &quot;Afegit un nou paràgraf al README en la branca main&quot;
-</code></pre>
-<p>Si analitzem el log, veurem que ara tenim dues branques que han divergit i tenen canvis en el mateix lloc. Esta volta anem a executar el log amb un paràmetre més per veure la diferència entre les dues branques:</p>
-<pre><code class="language-bash">git log --oneline --graph --decorate --all
-</code></pre>
-<p>I vorem que les nostres dues branques han divergit i seguixen camins diferents:</p>
-<pre><code class="language-bash">* 8e24c61 (HEAD -&gt; main) Afegit un nou paràgraf al README en la branca main
-| * e28aafd (nova_branca) Afegit un nou paràgraf al README
-|/  
-* 2e4ef06 Canvis en la nova branca
-* 8a72d0a més canvis al README
-* 8267bc4 nous canvis al README
-* 2d094c9 canvis al README
-* a7a541a Afegit README.md
-</code></pre>
-<p>Si analitzem el log i el tranformem en diagrama tindriem algo així:</p>
-<p><img alt="Diagrama de branques divergents" src="../assets/image10.png" /></p>
-<p>Ara tenim dues branques que han divergit i tenen canvis en el mateix lloc. Si intentem fusionar les dues branques, Git no sabrà quin canvi escollir i ens donarà un error de fusió. Això és el que es coneix com a "conflicte de fusió". Això no ens ha d'espantar, si no que és una part normal del treball amb Git. Els conflictes de fusió són comuns quan treballem en equip i diverses persones fan canvis en el mateix fitxer al mateix temps. Primer anem a fer el merge de les branques:</p>
-<pre><code class="language-bash">git merge nova-branca
-</code></pre>
-<p>Encara que ens marque el conflicte, Git ens permet resoldre els conflictes de fusió manualment. Quan fem un merge i hi ha un conflicte, Git marcarà els fitxers afectats amb un missatge d'error i ens indicarà quins fitxers tenen conflictes. Podem obrir els fitxers afectats i veure les línies en conflicte, que estaran marcades amb <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> i <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
-<p>Això ens permetrà veure quins canvis hi ha en cada branca i decidir quins canvis volem conservar. Un cop haguem resolt els conflictes, podem afegir els fitxers afectats a l'staging area i fer un commit per completar la fusió.</p>
-<pre><code class="language-bash">git commit -am &quot;Fusió de nova-branca a main&quot;
-</code></pre>
-<p>Anem a analitzar com queda tot plegat un cop hem fusionat les dues branques divergents. Tornem a fer un git log amb tots els paràmetres anteriors i veurem que ara tenim un commit nou que representa la fusió de les dues branques:</p>
-<pre><code class="language-bash">*   b8f513e (HEAD -&gt; main) Fusió de nova_branca en main
-|\  
-| * e28aafd (nova_branca) Afegit un nou paràgraf al README
-* | 8e24c61 Afegit un nou paràgraf al README en la branca main
-|/  
-* 2e4ef06 Canvis en la nova branca
-* 8a72d0a més canvis al README
-* 8267bc4 nous canvis al README
-* 2d094c9 canvis al README
-* a7a541a Afegit README.md
-</code></pre>
-<p>I si analitzem el diagrama, tindrem algo semblant al següent:</p>
-<p><img alt="Diagrama de fusió de branques" src="../assets/image11.png" /></p>
-<p>Un cop an fusionades les dues branques, podem eliminar la branca <code>nova_branca</code> si ja no la necessitem. Per fer-ho, podem utilitzar la comanda següent:</p>
-<pre><code class="language-bash">git branch -d nova_branca
-</code></pre>
+<p>El que fa <code>git revert</code> és crear un nou commit que desfà els canvis del commit especificat. Això és útil si voleu desfer un canvi sense eliminar l'historial de commits. A més, <code>git revert</code> és una comanda segura, ja que no elimina cap canvi i manté l'historial de commits intacte.</p>
 
 
 
