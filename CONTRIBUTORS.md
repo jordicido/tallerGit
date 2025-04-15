@@ -3,3 +3,5 @@ Aquí tenim una llista dels contribuidors del projecte:
 - Jordi Cido
 - Antonio Camarena
 - Josep
+- Jordi Escriva
+
